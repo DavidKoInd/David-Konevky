@@ -12,8 +12,8 @@ function navScroll() {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (winScroll / height) * 100;
-        progressBar.style.width = `calc(${scrolled}% + 2.5rem)`;
-        navImg.style.left = `${scrolled}%`;
+        progressBar.style.width = `clamp(0px, calc(${scrolled}% + 2.5rem), 100%)`;
+        navImg.style.left = `clamp(0px, ${scrolled}%, calc(100% - ${navImg.offsetWidth}px - 0.75rem)`;
         return
     }
     progressBar.style.height = `0`;
@@ -21,26 +21,6 @@ function navScroll() {
     navImg.top = 0;
     navImg.left = 0;
 }
-
-const cdImage = document.querySelector(".main__image");
-function cdAnim() {
-    if (window.pageYOffset > 0) {
-        cdImage.style.animationPlayState = 'running';
-        cdImage.style.animation = "1.5s linear 0s infinite normal none running cd-anim-right";
-        cdImage.style.left = "100%";
-        cdImage.style.translate = "-20% -50%";
-        cdImage.style.opacity = `100%`;
-        return
-    }
-    cdImage.style.left = "50%";
-    cdImage.style.translate = "-50% -50%";
-    cdImage.style.opacity = `20%`;
-    setTimeout(() => {
-        cdImage.style.opacity = `0`;
-    }, 2000);
-}
-
-window.onscroll = function () {navScroll(); cdAnim()}
 
 const colorButton = document.querySelectorAll(".color");
 const colorButtonArray = ["blue", "orange", "yellow"];
@@ -53,4 +33,5 @@ function colorButtonClicker() {
 }
 colorButtonClicker()
 
-window.onscroll = function () {navScroll(); cdAnim()}
+
+window.onscroll = function () {navScroll()}
