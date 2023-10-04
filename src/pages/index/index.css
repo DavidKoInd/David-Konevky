@@ -1,5 +1,7 @@
 :root {
-    --font-special: "neue_machina";
+    /* Typography Styles */
+    --font-special: "neue_machina", sans-serif;
+    /* Colors */
     --blue: #0862FF;
     --orange: #ff4e08;
     --yellow: #ffc508;
@@ -10,7 +12,7 @@
     --section-padding:clamp(2rem, calc(1 * 32px + (64 - 32) * (100vw - 400 * 1px) / (600 - 400)), 4rem);
 }
 
-
+/* Global Styles */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -31,12 +33,6 @@ html {
 body {
     background-color: var(--background); 
     transition:background-color 0.5s;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    min-height:100vh;
 }
 
 .logo {
@@ -81,11 +77,15 @@ main {
 .color {
     width: 2rem;
     height:2rem;
-    background-color: #ff4e08;
+    background-color: #ffffff;
     border:1px solid black;
     cursor: pointer;
     border-radius: 50%;
     
+}
+
+.color.selected {
+    background-color: #ffffff;
 }
 
 .color-blue {
@@ -98,6 +98,12 @@ main {
 
 .color-yellow {
     background-color: #ffc508;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
 }
 
 .section-hero {
@@ -150,7 +156,7 @@ main {
     transition:0.5s background-color,0.5s color;
 }
 
-.list__item:is(:hover,:focus){
+.list__item:is(:hover, :focus){
     background-color: black;
     color:white;
 }
@@ -178,7 +184,7 @@ main {
     transition: transform 0.3s;
 }
 
-.list__item--big:is(:hover,:focus) {
+.list__item--big:is(:hover, :focus) {
     background-color: white;
     color:black;
     transform: scale(1.05);
