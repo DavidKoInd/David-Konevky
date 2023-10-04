@@ -2,7 +2,7 @@ const logoElement = document.querySelector(".logo");
 const progressBar = document.querySelector(".progress-bar");
 const colorButtons = document.querySelectorAll(".color");
 const colorNames = ["blue", "orange", "yellow"];
-const viewportHeight = window.innerHeight;
+const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 const pageHeight = document.body.scrollHeight;
 
 function updateProgressBar() {
@@ -15,13 +15,13 @@ function handleScroll() {
     if (window.pageYOffset > 0) {
         logoElement.style.height = `2rem`;
         progressBar.style.height = `0.25rem`;
-        updateProgressBar();
     } else {
         progressBar.style.height = `0`;
         logoElement.style.height = `3rem`;
         logoElement.style.top = 0;
         logoElement.style.left = 0;
     }
+    updateProgressBar();
 }
 
 function setColorButtonClickListeners() {
@@ -34,8 +34,13 @@ function setColorButtonClickListeners() {
             document.documentElement.style.setProperty('--background', `var(--${colorNames[i]})`);
         });
     });
-    
 }
 
+function setViewportHeight() {
+    document.documentElement.style.setProperty('--viewport-height', `${viewportHeight}px`);
+  }
+  
+
 setColorButtonClickListeners();
+setViewportHeight();
 window.addEventListener('scroll', handleScroll);
