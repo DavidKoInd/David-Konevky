@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'neue_machina';
-    src: url("PPNeueMachina-InktrapLight.woff2") format("opentype");
+    src: url("/src/assets/fonts/PPNeueMachina-InktrapLight.woff2") format("opentype");
     font-weight: normal;
     font-style: normal;
 
