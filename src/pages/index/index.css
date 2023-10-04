@@ -199,7 +199,7 @@ main {
 }
 
 .list__item--github::before {
- background-image: url(../../assets/github-mark.svg);
+ background-image: url(assets/github-mark.svg);
 }
 
 .main__circle {
