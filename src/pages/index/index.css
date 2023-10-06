@@ -244,6 +244,8 @@ main {
     animation-timeline: --section;
     animation-name: show;
     animation-range-end: cover 45%;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
     margin: 0 1rem;
     margin-bottom: 1rem;
 }
