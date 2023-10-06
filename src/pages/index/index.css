@@ -3,9 +3,9 @@
     --font-main: "neue_machina", sans-serif;
 
     /* Colors */
-    --blue: #0862FF;
-    --orange: #ff4e08;
-    --yellow: #ffc508;
+    --blue: #478aff;
+    --orange: #ff6b56;
+    --yellow: #fcfd9c;
 
     /* Background */
     --background: var(--blue);
@@ -103,15 +103,15 @@ body {
 }
 
 .color-blue {
-    background-color: #0862FF;
+    background-color: var(--blue);
 }
 
 .color-orange {
-    background-color: #ff4e08;
+    background-color: var(--orange);
 }
 
 .color-yellow {
-    background-color: #ffc508;
+    background-color: var(--yellow);
 }
 
 main {
@@ -171,8 +171,7 @@ main {
 }
 
 .list__item:is(:hover, :focus) {
-    background-color: black;
-    color: white;
+    background-color: rgb(243, 243, 243);
 }
 
 .list__item--small {
@@ -195,14 +194,24 @@ main {
     font-family: "inter";
     padding: 0.5rem;
     border-radius: 0.5rem;
+    padding-bottom:calc(0.5rem + 3px);
+    box-shadow: inset 0px -3px 0 rgba(0,0,0,0.35);
     gap: 0.5rem;
-    transition: transform 0.3s;
 }
 
 .list__item--big:is(:hover, :focus) {
     background-color: white;
+    box-shadow:inset 0px -3px 0 rgba(0,0,0,0.4), inset 0px -1px 0 rgba(0,0,0,0.1);
     color: black;
-    transform: scale(1.05);
+}
+
+.list__item--big:active {
+    background-color: white;
+    box-shadow: inset 0px 0px 0 rgba(0,0,0,0.35);
+    color: black;
+    padding:0.5rem;
+    margin-top:3px;
+    transform: translateY(1.5px);
 }
 
 .list__item--big::before {
@@ -322,7 +331,7 @@ main {
     text-indent: 0;
     list-style-type: 0;
     list-style: none;
-    box-shadow: 0px 0px black;
+    box-shadow: 0px 0px rgba(0,0,0,0.4);
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
@@ -338,7 +347,7 @@ main {
 
 .section__item:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 4px 4px black;
+    box-shadow: 4px 4px rgba(0,0,0,0.4);
 }
 
 .grid {
@@ -364,13 +373,13 @@ main {
     text-indent: 0;
     list-style-type: 0;
     list-style: none;
-    box-shadow: 0px 0px black;
+    box-shadow: 0px 0px rgba(0,0,0,0.4);
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 4px 4px black;
+    box-shadow: 4px 4px rgba(0,0,0,0.4);
 }
 
 .card__image {
@@ -401,15 +410,15 @@ main {
 }
 
 .card__attribute-UIUX {
-    background-color: #0862FF;
+    background-color: var(--blue);
 }
 
 .card__attribute-GD {
-    background-color: #ff4e08;
+    background-color: var(--orange);
 }
 
 .card__attribute-W {
-    background-color: #ffc508;
+    background-color: var(--yellow);
 }
 
 .card__button {
