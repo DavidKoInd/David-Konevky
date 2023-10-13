@@ -1,7 +1,5 @@
 const logoElement = document.querySelector(".logo");
 const progressBar = document.querySelector(".progress-bar");
-const colorButtons = document.querySelectorAll(".color");
-const colorNames = ["blue", "orange", "yellow"];
 const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 const pageHeight = document.body.scrollHeight;
 
@@ -24,23 +22,9 @@ function handleScroll() {
     updateProgressBar();
 }
 
-function setColorButtonClickListeners() {
-    colorButtons.forEach((button, i) => {
-        button.addEventListener('click', () => {
-            colorButtons.forEach((btn) => {
-                btn.classList.remove('selected');
-            });
-            button.classList.add('selected');
-            document.documentElement.style.setProperty('--background', `var(--${colorNames[i]})`);
-        });
-    });
-}
-
 function setViewportHeight() {
     document.documentElement.style.setProperty('--viewport-height', `${viewportHeight}px`);
-  }
+}
   
-
-setColorButtonClickListeners();
 setViewportHeight();
 window.addEventListener('scroll', handleScroll);

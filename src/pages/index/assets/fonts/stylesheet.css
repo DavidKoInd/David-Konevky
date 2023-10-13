@@ -1,6 +1,22 @@
 @font-face {
-    font-family: 'neue_machina';
+    font-family: 'neue_machina-light';
     src: url("PPNeueMachina-InktrapLight.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display:"swap";
+}
+
+@font-face {
+    font-family: 'neue_machina';
+    src: url("PPNeueMachina-InktrapRegular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display:"swap";
+}
+
+@font-face {
+    font-family: 'neue_machina-bold';
+    src: url("PPNeueMachina-InktrapUltrabold.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display:"swap";
