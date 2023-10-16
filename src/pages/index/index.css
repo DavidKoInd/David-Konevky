@@ -433,12 +433,12 @@ main {
 }
 
 .grid__item--image-one {
-    background-image: url(assets/gradient--img.png);
+    background-image: url(assets/gradient--img.jpg);
 }
 
 .grid__item--image-two {
     grid-column: span 3;
-    background-image: url(assets/gradient--img2.png);
+    background-image: url(assets/gradient--img2.jpg);
 }
 
 @media screen and (max-width:1024px) {
