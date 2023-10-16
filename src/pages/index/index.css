@@ -102,7 +102,7 @@ main {
     text-wrap: balance;
     width: 100%;
     margin: 0 auto;
-    height:var(--viewport-height,100vh)
+    height:100vmin;
 }
 
 .title {
@@ -424,11 +424,27 @@ main {
 }
 
 .grid__item--image-one {
-    grid-column: span 2;
     background-image: url(assets/gradient--img.png);
 }
 
 .grid__item--image-two {
     grid-column: span 3;
     background-image: url(assets/gradient--img2.png);
+}
+
+@media screen and (max-width:1000px) {
+    .grid__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid__item {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .grid__list {
+        display:flex;
+        flex-direction: column;
+    }
 }
