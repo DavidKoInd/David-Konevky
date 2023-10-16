@@ -105,6 +105,12 @@ main {
     min-height:100vmin;
 }
 
+@media (max-height: 350px) {
+    .section-hero {
+        margin-bottom: 1rem;
+    }
+}
+
 .title {
     font-family: var(--font-bold);
     color:white;
