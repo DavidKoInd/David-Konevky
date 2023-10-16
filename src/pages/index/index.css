@@ -105,7 +105,7 @@ main {
     min-height:100vmin;
 }
 
-@media (max-height: 350px) {
+@media (max-height: 320px) {
     .section-hero {
         margin-bottom: 1rem;
     }
@@ -166,15 +166,9 @@ main {
 
 .list__item--small {
     padding:0.625rem 1.25rem;
+    border:none;
     border-radius: 2rem;
 }
-
-@media (max-width:700px) {
-    .list__item--small {
-        line-height: 1rem;
-    }
-}
-
 
 .list__item--big {
     display: flex;
@@ -281,7 +275,7 @@ main {
     padding-right: 2rem;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1024px) {
     .about-me {
         flex-direction: column;
         margin:0 1rem;
@@ -313,7 +307,7 @@ main {
     gap:1rem;
 }
 
-@media (max-width:1000px) {
+@media (max-width:1024px) {
     .card__list {
         grid-template-columns: repeat(3,1fr);
     }
@@ -439,7 +433,7 @@ main {
     background-image: url(assets/gradient--img2.png);
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
     .grid__list {
         grid-template-columns: repeat(2,1fr);
     }
@@ -449,7 +443,7 @@ main {
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
     .grid__list {
         display:flex;
         flex-direction: column;
