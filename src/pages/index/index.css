@@ -3,6 +3,7 @@
     --font-light: "neue_machina-light", sans-serif;
     --font-regular: "neue_machina", sans-serif;
     --font-bold: "neue_machina-bold", sans-serif;
+    --font-secondary: "inter", sans-serif;
 
     /* Background */
     --background: black;
@@ -184,7 +185,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "inter";
+    font-family: var(--font-secondary);
     padding: 0.5rem;
     border:1px solid white;
     color:white;
@@ -306,7 +307,7 @@ main {
 
 
 .text {
-    font-family: "inter";
+    font-family: var(--font-secondary);
     color:inherit;
 }
 
@@ -417,7 +418,7 @@ main {
 }
 
 .grid__title {
-    font-family: "inter";
+    font-family: var(--font-secondary);
     font-weight: bold;
     font-size: 2.5rem;
     padding-bottom: 0.25rem;
@@ -427,7 +428,7 @@ main {
 }
 
 .grid__text {
-    font-family: "inter";
+    font-family: var(--font-secondary);
     color:#ffffff;
 }
 
