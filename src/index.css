@@ -143,11 +143,15 @@ main {
     display: flex;
     justify-content: center;
     max-width: 95vw;
-    gap: 0.25rem;
     margin: 0 auto;
 }
 
+.list--primary {
+    gap: 0.5rem;
+}
+
 .list--secondary {
+    gap: 0.25rem;
     margin-top: 0.5rem;
     background-color: var(--c-dark-grey);
     border: var(--b-grey);
