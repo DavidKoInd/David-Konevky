@@ -171,10 +171,6 @@ main {
     transition: 0.5s background-color, 0.5s color, 0.5s transform;
 }
 
-.list__item--small:is(:hover, :focus) {
-    transform: translateY(-2px);
-}
-
 .list__item--small {
     padding:0.625rem 1.25rem;
     border:none;
