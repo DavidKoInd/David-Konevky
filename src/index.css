@@ -53,6 +53,10 @@ body {
     transition: background-color 0.5s;
 }
 
+img {
+    display:block;
+}
+
 .logo {
     z-index: 100;
     position: fixed;
@@ -87,15 +91,15 @@ body {
     0% {background-position: right;}
 }
 
-.list__item.color-1 {
+.list__item.color-1 , .color-1 {
     background-color: var(--c-purple);
 }
 
-.list__item.color-2 {
+.list__item.color-2, .color-2 {
     background-color: var(--c-pink);
 }
 
-.list__item.color-3 {
+.list__item.color-3, .color-3 {
     background-color: var(--c-green);
 }
 
@@ -456,4 +460,107 @@ main {
         display:flex;
         flex-direction: column;
     }
+}
+
+@media screen and (max-width:500px) {
+    .grid__item {
+        min-height:30vh;
+    }
+}
+
+.project--container {
+    margin-top: 4rem;
+    margin-inline:1rem;
+    margin-bottom: 1rem;
+}
+
+.project__list {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+}
+
+.project__title {
+    font-family: var(--font-secondary);
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.project__item {
+    background-color: var(--c-dark-grey);
+    list-style-type: none;
+    font-family: var(--font-secondary);
+    color:white;
+    border: var(--b-grey);
+    border-radius: 1rem;
+    padding:1rem;
+    padding-bottom: 4rem;
+    transition: all 0.5s ease-out;
+}
+
+.project__item:hover {
+    border:var(--b-grey-hover);
+}
+
+@media screen and (max-width:768px) {
+    .project--container {
+        margin-top: 4rem;
+        margin-inline:0;
+    }
+
+    .project__list {
+        display:flex;
+        flex-direction: column;
+        gap:0;
+    }
+
+    .project__item {
+        border-inline: none;
+        border-radius: 0;
+    }
+
+    .project__item:hover {
+        border-inline:none;
+    }
+    
+    .project__item:nth-child(even) {
+        border:none;
+    }
+}
+
+
+.project__image {
+    border-radius: 0.5rem;
+    width:100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    object-position: center;
+}
+
+.project__name {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color:inherit;
+    padding-block: 0.5rem;
+}
+
+.project__text {
+    font-family: inherit;
+    color:inherit;
+}
+
+.project__labels {
+    padding-bottom: 1rem;
+}
+
+.project__label {
+    font-family: inherit;
+    border-radius: 999px;
+    padding:0.25rem 0.75rem;
+    color:black;
+    font-size: 0.75rem;
 }
