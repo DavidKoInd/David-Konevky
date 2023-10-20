@@ -408,6 +408,7 @@ main {
     background-size: cover;
     background-position: center;
     border: 0;
+    aspect-ratio:none;
 }
 
 .grid__item--gradient:hover {
@@ -452,6 +453,10 @@ main {
 
     .grid__item {
         grid-column: span 1;
+    }
+
+    .grid__item--gradient {
+        aspect-ratio:16/9;
     }
 }
 
