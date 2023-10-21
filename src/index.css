@@ -562,10 +562,14 @@ main {
 }
 
 .project__labels {
+    display:inline-flex;
+    flex-wrap: wrap;
+    gap:0.25rem;
     padding-bottom: 1rem;
 }
 
 .project__label {
+    display:inline-block;
     font-family: var(--font-regular);
     border-radius: 999px;
     padding:0.3rem 0.8rem;
