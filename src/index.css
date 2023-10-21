@@ -503,7 +503,13 @@ main {
     border:var(--b-grey-hover);
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:1024px) {
+    .project__title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:768px) {
     .project--container {
         margin-top: 4rem;
         margin-inline:0;
