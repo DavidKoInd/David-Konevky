@@ -569,7 +569,7 @@ main {
     }
 
     .project__item:hover::before {
-        height: calc(2vh + 2px);
+        height: calc(8vh + 2px);
         opacity:0.8;
     }
 
