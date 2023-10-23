@@ -560,6 +560,14 @@ main {
         border-radius: 0;
     }
 
+    .project__item::before {
+        border-radius: 0;
+    }
+
+    .project__item:hover::before {
+        height: calc(1vh + 2px);
+    }
+
     .project__item:hover {
         border-inline:none;
     }
