@@ -547,6 +547,7 @@ main {
     .project--container {
         margin-top: 4rem;
         margin-inline:0;
+        margin-bottom: 0;
     }
 
     .project__list {
@@ -561,6 +562,9 @@ main {
     }
 
     .project__item::before {
+        width:100%;
+        left:0;
+        bottom:0;
         border-radius: 0;
     }
 
