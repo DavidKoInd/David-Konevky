@@ -30,6 +30,12 @@
     --sh-grey-hover: inset 0px 0px 0px 1px var(--c-light-grey);
 }
 
+@media (max-width:350px) {
+    :root {
+        --title-rem: 3rem;
+    }
+}
+
 /* Global Styles */
 * {
     box-sizing: border-box;
@@ -572,7 +578,7 @@ main {
     display:inline-block;
     font-family: var(--font-regular);
     border-radius: 999px;
-    padding:0.3rem 0.8rem;
+    padding:0.4rem 0.8rem;
     color:black;
     font-size: 0.8rem;
 }
