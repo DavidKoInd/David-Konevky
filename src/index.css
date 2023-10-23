@@ -570,7 +570,7 @@ main {
 .project__labels {
     display:inline-flex;
     flex-wrap: wrap;
-    gap:0.25rem;
+    gap:0.3rem;
     padding-bottom: 1rem;
 }
 
